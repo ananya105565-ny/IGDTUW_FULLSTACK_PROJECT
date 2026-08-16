@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pro Crypto Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Market Dashboard</h1>
+        <div class="status">
+            <span id="connection-dot">[ ]</span>
+            <span id="connection-text">Connecting...</span>
+        </div>
+    </header>
+
+    <div class="market-grid">
+        <div class="asset-card" id="card-btc">
+            <header>Bitcoin <span>BTC/USDT</span></header>
+            <div class="price" id="price-btc">---</div>
+            <div class="change" id="change-btc">24h: ---</div>
+        </div>
+        <br>
+        <div class="asset-card" id="card-eth">
+            <header>Ethereum <span>ETH/USDT</span></header>
+            <div class="price" id="price-eth">---</div>
+            <div class="change" id="change-eth">24h: ---</div>
+        </div>
+        <br>
+        <div class="asset-card" id="card-sol">
+            <header>Solana <span>SOL/USDT</span></header>
+            <div class="price" id="price-sol">---</div>
+            <div class="change" id="change-sol">24h: ---</div>
+        </div>
+    </div>
+    <br><hr><br>
+
+    <div class="feed-container">
+        <h3>Live BTC Trades (Unthrottled Firehose)</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Price (USDT)</th>
+                    <th>Amount (BTC)</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="trades-tbody">
+            
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
